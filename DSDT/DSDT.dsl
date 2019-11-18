@@ -17690,12 +17690,9 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000001)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If (LEqual (GPHD, One))
-                {
-                    Return (0x03)
-                }
-
+                
                 Return (0x0F)
+
             }
         }
     }
@@ -24915,7 +24912,7 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000001)
                     Store (0x07DD, OSYS)
                 }
 
-                If (_OSI ("Windows 2015"))
+                If(LOr(_OSI("Darwin"),_OSI("Windows 2015")))
                 {
                     Store (0x07DF, OSYS)
                 }
@@ -41803,17 +41800,7 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000001)
                     Store (0x20, HID2)
                 }
 
-                If (LLess (OSYS, 0x07DC))
-                {
-                    Return (SBFI)
-                }
-
-                If (LEqual (TPDM, Zero))
-                {
-                    Return (ConcatenateResTemplate (SBFB, SBFG))
-                }
-
-                Return (ConcatenateResTemplate (SBFB, SBFI))
+                Return (ConcatenateResTemplate (SBFB, SBFG))
             }
 
             Method (TPRD, 0, Serialized)

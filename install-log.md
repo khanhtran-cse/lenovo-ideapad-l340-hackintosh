@@ -2,6 +2,12 @@
 
 ## Fix bug log
 
+### Nov 18 2019
+
+Use NoTouchID to fix slow/buggy when show enter password dialog (authentication).
+
+Link: [NoTouchId](https://github.com/al3xtjames/NoTouchID)
+
 ### Oct 17 2019
 
 Custom ```Usb inject all``` to fix immediately wake up after sleeping.
