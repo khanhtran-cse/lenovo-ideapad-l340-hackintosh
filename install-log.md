@@ -2,6 +2,10 @@
 
 ## Fix bug log
 
+### Dec 20
+
+Patch _Q11 (Brightness down) + _Q12(Brightness up) to change brightness from keyboard
+
 ### Nov 18 2019
 
 Use NoTouchID to fix slow/buggy when show enter password dialog (authentication).
