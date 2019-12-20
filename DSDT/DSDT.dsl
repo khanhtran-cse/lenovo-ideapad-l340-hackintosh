@@ -21213,40 +21213,18 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000001)
 
             Method (_Q11, 0, NotSerialized)  // _Qxx: EC Query
             {
-                If (IGDS)
-                {
-                    If (LEqual (And (^^^GFX0.CBLV, 0x7F), One))
-                    {
-                        Store (One, BKLT)
-                    }
-                }
+                
+                // Brightness Down
+                Notify(\_SB.PCI0.LPCB.PS2K, 0x0405)
 
-                Store (0x11, P80B)
-                Notify (^^^GFX0.DD1F, 0x87)
-                Notify (VPC0, 0x80)
             }
 
             Method (_Q12, 0, NotSerialized)  // _Qxx: EC Query
             {
-                If (IGDS)
-                {
-                    If (LEqual (BKLT, One))
-                    {
-                        Store (Zero, BKLT)
-                    }
-                    Else
-                    {
-                        Store (0x12, P80B)
-                        Notify (^^^GFX0.DD1F, 0x86)
-                        Notify (VPC0, 0x80)
-                    }
-                }
-                Else
-                {
-                    Store (0x12, P80B)
-                    Notify (^^^GFX0.DD1F, 0x86)
-                    Notify (VPC0, 0x80)
-                }
+                
+                // Brightness Up
+                Notify(\_SB.PCI0.LPCB.PS2K, 0x0406)
+
             }
 
             Method (_Q13, 0, NotSerialized)  // _Qxx: EC Query
