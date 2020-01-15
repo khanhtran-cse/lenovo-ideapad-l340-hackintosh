@@ -153,7 +153,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>ACPI Patch</string>
+					<string>Fix AsRock Z390 BIOS DSDT Device(RTC) bug</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -417,7 +417,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>layout-id</key>
-				<integer>11</integer>
+				<integer>18</integer>
 				<key>no-controller-patch</key>
 				<integer>1</integer>
 			</dict>
@@ -497,7 +497,7 @@
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>christmas</string>
+		<string>BGM</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
@@ -578,17 +578,17 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>BiosReleaseDate</key>
-		<string>09/17/2019</string>
+		<string>11/14/2019</string>
 		<key>BiosVendor</key>
 		<string>Apple Inc.</string>
 		<key>BiosVersion</key>
-		<string>MBP152.88Z.F000.B00.1909172038</string>
+		<string>MBP152.88Z.F000.B00.1911142159</string>
 		<key>Board-ID</key>
 		<string>Mac-827FB448E656EC26</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
 		<key>BoardSerialNumber</key>
-		<string>C02809802QXJH4R1H</string>
+		<string>C02941102CDJH4RJA</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -600,7 +600,7 @@
 		<key>ChassisType</key>
 		<string>0x09</string>
 		<key>EfiVersion</key>
-		<string>1037.0.78.0.0</string>
+		<string>1037.60.58.0.0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>FirmwareFeatures</key>
@@ -636,9 +636,9 @@
 		<key>ProductName</key>
 		<string>MacBookPro15,2</string>
 		<key>SerialNumber</key>
-		<string>C02WCGYKJHCD</string>
+		<string>C02ZJ0J6JHCD</string>
 		<key>SmUUID</key>
-		<string>9CF7D352-2B82-4A34-8DA5-B9AF7218227F</string>
+		<string>6A1FACCE-248A-4024-BE9C-C2F508B1B6BC</string>
 		<key>Version</key>
 		<string>1.0</string>
 	</dict>

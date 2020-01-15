@@ -2,7 +2,15 @@
 
 ## Fix bug log
 
-### Dec 20
+### Jan 15 2020
+1. Use follow command to fix headphone noise after sleep:
+```hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25```
+2. Try to use UsbPort for fix crash when waking up.
+- Remove UsbInjectAll + SMCLightSensor kext
+- Add UsbPort kext (use Hackintosh to generate)
+- Add DSDT patch (use Hackintosh to generate)
+
+### Dec 20 2019
 
 Patch _Q11 (Brightness down) + _Q12(Brightness up) to change brightness from keyboard
 
