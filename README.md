@@ -38,11 +38,11 @@ Lenovo L340 Gaming - 15IRH
 
 ## For trackpad
 
-Some reason prevented trackpad work, so I have tried changed some code snippet of VoodooI2C.kext. So you can use ```my custom VoodooI2C.kext``` + VoodooI2CHID.kext/VoodooI2CSynaptics.kext. VoodooI2CHID.kext/VoodooI2CSynaptics.kext you can find at [Release page](https://github.com/alexandred/VoodooI2C/releases) of VoodooI2C
+Some reason prevented trackpad work, so I have tried changed some code snippet of VoodooI2C.kext. So you can use ```my custom VoodooI2C.kext``` + VoodooI2CHID.kext/VoodooI2CSynaptics.kext depend on your trackpad is Synaptics or ELAN. VoodooI2CHID.kext/VoodooI2CSynaptics.kext you can find at [Release page](https://github.com/alexandred/VoodooI2C/releases) of VoodooI2C
 
 1. To make trackpad work, you should patch GPIO patch in VoodooI2C Guide.
 
-2. After patch this, you can copy and patse my VoodooI2C kext (VoodooI2C.kext and VoodooI2CSynaptic.kext) to clover (or /L/E).
+2. After patch this, you can copy and patse my VoodooI2C kext (VoodooI2C.kext and VoodooI2CSynaptic.kext) to clover (or /L/E). If your trackpad is ELAN, you must replace VoodooI2CSynaptics.kext with VoodooI2CHID.kext.
 
 3. Rebuilt cache if needed
 
