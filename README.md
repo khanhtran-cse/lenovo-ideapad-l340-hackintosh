@@ -2,6 +2,8 @@
 
 Current version is Mojave 10.14.6.
 
+I  write this instruction quickly, so I might be hard to read. Sorry for this.
+
 ## System description
 
 Lenovo L340 Gaming - 15IRH
@@ -50,9 +52,9 @@ Some reason prevented trackpad work, so I have tried changed some code snippet o
 
 ## For HDMI
 
-You cannot use HDMI because HDMI is connected with GTX 1050 that was disabled in DSDT. To resolve this problem, I bought a USB 3.0 to HDMI adapter (about 20$). The quality of Audio and Video is acceptable.
+You cannot use HDMI because HDMI is connected with GTX 1050 that was disabled in DSDT. To resolve this problem, I bought a USB 3.0 to HDMI adapter (about 30$). The quality of Audio and Video is acceptable.
 
-Here is a adapter that support Mac OS/Windows/Linux. Cable USB 3.0 to HDMI Unitek Y3702. After getting it, you mus download kext/driver for it from DisplayLink page.
+Here is a adapter that support Mac OS/Windows/Linux. [Cable USB 3.0 to HDMI Unitek Y3702](https://www.amazon.com/-/es/Y-3702/dp/B00DHBWFHU) (I bought it with 30$). After got it, you must download kext/driver for it from [DisplayLink page](https://www.displaylink.com/downloads/macos).
 
 ## Contact me
 
