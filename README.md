@@ -1,5 +1,6 @@
 # Lenovo Ideapad L340 Gaming Hackintosh
 
+![Cover](/docs/cover.jpg)
 Current version is Catalina 10.15.3 (also tested in Mojave 10.14.6)
 
 ## System description
