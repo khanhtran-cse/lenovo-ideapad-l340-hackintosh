@@ -65,10 +65,11 @@ Some reasons prevented trackpad work. I think it is a DSDT bug. After a lot of s
 To make trackpad work, you must: 
 
 ```
-1. Download VoodooI2C kext at https://github.com/alexandred/VoodooI2C/releases. I currently use version 2.2.
+1. Download VoodooI2C kext at https://github.com/alexandred/VoodooI2C/releases.
+I currently use version 2.2.
 2. Download VoodooI2CSynaptics kext at https://github.com/EmotionalLove/VoodooI2CSynaptics/releases.
 3. Rename device name in Info.plist file of VoodooI2CSynaptic to SYNA2B52 (default name is SYNA2B33).
-4. Copy VoodooI2C.kext you downloaded at Step 1 and updated VoodooI2CSynaptics.kext (step 3) to /L/E or /Clover/kexts/Other
+4. Copy VoodooI2C.kext you downloaded at Step 1 and updated VoodooI2CSynaptics.kext (step 3) to /L/E (or /Clover/kexts/Other).
 5. Rebuilt kext cache if needed.
 6. Have fun!
 
