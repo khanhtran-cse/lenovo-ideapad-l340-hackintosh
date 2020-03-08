@@ -2,13 +2,27 @@
 
 ## Fix bug log
 
-### Jan 15 2020
-1. Use follow command to fix headphone noise after sleep:
+### Mar 8 2020
+
+The Bluetooth kexts cause slow boot and Wifi issues on Catalina. Remove it and update others before update to Catalina 10.15
+
+### Mar 7 2020
+
+This laptop has a buggy DSDT, so trackpad cannot use Interupt mode. I tried to use Polling mode. Thanks to [@EmotionalLove](https://github.com/EmotionalLove/) who implements Polling mode for VoodooI2CSynaptics.kext. [Link here](https://github.com/EmotionalLove/VoodooI2CSynaptics)
+
+Thanks to [@tctien342](https://github.com/tctien342) who found it.
+
+### Jan 15 2020 - Updated at Mar 8 2020
+1. Use below command to fix headphone noise after sleep. After run command, replug headphone.
+
 ```hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25```
-2. Try to use UsbPort for fix crash when waking up.
-- Remove UsbInjectAll + SMCLightSensor kext
-- Add UsbPort kext (use Hackintosh to generate)
-- Add DSDT patch (use Hackintosh to generate)
+
+2. ~~Try to use UsbPort for fix crash when waking up.~~
+- ~~Remove UsbInjectAll + SMCLightSensor kext~~
+- ~~Add UsbPort kext (use Hackintosh to generate)~~
+- ~~Add DSDT patch (use Hackintosh to generate)~~
+
+__Note__: Restart while plugged USB + sleep is persistent on Windows 10. It is seem DSDT bug.
 
 ### Dec 20 2019
 
