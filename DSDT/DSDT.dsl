@@ -41777,8 +41777,8 @@ DefinitionBlock ("", "DSDT", 2, "LENOVO", "CB-01   ", 0x00000001)
                     Store (0x2C, BADR)
                     Store (0x20, HID2)
                 }
-
-                Return (ConcatenateResTemplate (SBFB, SBFG))
+                Return (ConcatenateResTemplate (SBFB, SBFI))
+//                Return (ConcatenateResTemplate (SBFB, SBFG))
             }
 
             Method (TPRD, 0, Serialized)
