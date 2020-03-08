@@ -5,7 +5,7 @@ Current version is Catalina 10.15.3 (also tested in Mojave 10.14.6)
 
 ## System description
 
-Lenovo L340 Gaming - 15IRH
+IdeaPad L340-15IRH Gaming
 ```
 1. CPU i5 9300H
 2. Ram 8GB
@@ -60,7 +60,7 @@ __Note:__ You can check install log to know how to fix some common problems. You
 
 ![alt text](/docs/trackpad.png)
 
-Some reasons prevented trackpad work. I think it is a DSDT bug. After a lot of search, I found the solution - run trackpad in Polling mode. Because the offical VoodooI2CSynaptics.kext dont support polling mode, so you have to use the [EmotionalLove's Synaptics version](https://github.com/EmotionalLove/VoodooI2CSynaptics). Thanks to [@EmotionalLove](https://github.com/EmotionalLove) who implemented Polling mode for VoodooI2CSynaptics.kext and [@tctien342](https://github.com/tctien342) who found and refer this for me.
+Some reasons prevented trackpad work. I think it is a DSDT bug. After a lot of searching, I found the solution - run trackpad in Polling mode. Because the offical VoodooI2CSynaptics.kext dont support polling mode, so you have to use the [EmotionalLove's Synaptics version](https://github.com/EmotionalLove/VoodooI2CSynaptics). Thanks to [@EmotionalLove](https://github.com/EmotionalLove) who implemented Polling mode for VoodooI2CSynaptics.kext and [@tctien342](https://github.com/tctien342) who found and refer this for me.
 
 To make trackpad work, you must: 
 
