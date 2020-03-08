@@ -80,7 +80,7 @@ __Note:__ If your trackpad dont work, please make sure this is run in Polling mo
 
 1. ~~To make trackpad work, you should patch GPIO patch in VoodooI2C Guide. You can find Instruction [here](https://voodooi2c.github.io/#Installation/Installation)~~
 
-2.~~ After patch this, you can copy and patse my VoodooI2C kext (VoodooI2C.kext and VoodooI2CSynaptic.kext) to clover (or /L/E). If your trackpad is ELAN, you must replace VoodooI2CSynaptics.kext with VoodooI2CHID.kext.~~
+2.~~After patch this, you can copy and patse my VoodooI2C kext (VoodooI2C.kext and VoodooI2CSynaptic.kext) to clover (or /L/E). If your trackpad is ELAN, you must replace VoodooI2CSynaptics.kext with VoodooI2CHID.kext.~~
 
 3. ~~Rebuilt cache if needed~~
 
