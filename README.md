@@ -50,7 +50,7 @@ I update VoodooI2CSynaptics.kext code to implement QUIET AFTER TYPING. You can u
 
 ## Install instruction
 
-__Note:__ If your laptop has 8GB RAM, you must change __SMBIOS>Memory>Modules>Size__ to 8196
+__Note:__ If your laptop has 8GB RAM, you must change __SMBIOS>Memory>Modules>Size__ in __config.plist__ file to 8196
 
 - Firstly, you should try my EFI config. If it worked, congratulation! Otherwise, keep reading.
 
