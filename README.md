@@ -43,8 +43,10 @@ IdeaPad L340-15IRH Gaming
 
 ```
 1. When pluging USB devices (mouse, keyboard,...) and long sleep, the hack will crash. This problem also persistent on Windows 10. I think it is a DSDT bug and I try to fix it.
-2. While typing on keyboard, your hand might touch on trackpad, so cursor will move to other line. It is not really a bug, but I want to disable Trackpad about 500ms when typing to prevent cursor move. Linux driver for trackpad and VoodooI2CHID has implemented it, but VoodooI2CSynaptics dont.
 ```
+>2. While typing on keyboard, your hands may touch on trackpad, so cursor will move to other line. It is not really a bug, but I want to disable Trackpad about 500ms while typing to prevent cursor move. Linux driver for this trackpad and VoodooI2CHID has implemented it, but VoodooI2CSynaptics don't.
+
+I update VoodooI2CSynaptics.kext code to implement QUIET AFTER TYPING. You can use this version to prevent unexpected touch while typing. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics)
 
 ## Install instruction
 

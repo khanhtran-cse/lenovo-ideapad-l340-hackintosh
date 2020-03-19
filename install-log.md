@@ -2,6 +2,10 @@
 
 ## Fix bug log
 
+### Mar 19 2020
+
+I known how to implement Quiet After Typing. The trackpad works as expect.
+
 ### Mar 8 2020
 
 The Bluetooth kexts cause slow boot and Wifi issues on Catalina. Remove it and update others before update to Catalina 10.15
