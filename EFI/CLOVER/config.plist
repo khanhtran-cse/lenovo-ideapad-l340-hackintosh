@@ -650,7 +650,7 @@
 					<key>Frequency</key>
 					<integer>2666</integer>
 					<key>Size</key>
-					<integer>8192</integer>
+					<integer>16384</integer>
 					<key>Slot</key>
 					<integer>0</integer>
 					<key>Type</key>

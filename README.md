@@ -8,7 +8,7 @@ Current version is Catalina 10.15.3 (also tested in Mojave 10.14.6)
 IdeaPad L340-15IRH Gaming
 ```
 1. CPU i5 9300H
-2. Ram 8GB
+2. Ram 16GB
 3. Wifi has been replaced with Dell 1560
 4. SSD Samsung 970 EVO Plus 250GB + HDD WDC 1TB
 5. Intel UHD Graphics 630 + GTX 1050
@@ -47,6 +47,8 @@ IdeaPad L340-15IRH Gaming
 ```
 
 ## Install instruction
+
+__Note:__ If your laptop has 8GB RAM, you must change __SMBIOS>Memory>Modules>Size__ to 8196
 
 - Firstly, you should try my EFI config. If it worked, congratulation! Otherwise, keep reading.
 
