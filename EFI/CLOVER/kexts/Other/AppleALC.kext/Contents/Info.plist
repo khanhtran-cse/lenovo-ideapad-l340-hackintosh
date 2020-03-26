@@ -2355,18 +2355,67 @@
 					<integer>283902551</integer>
 					<key>ConfigData</key>
 					<data>
-					ASccIAEnHQEBJx6mAScfkAE3HPABNx0AATce
-					AAE3H0ABRxwQAUcdAQFHHhcBRx+QAUcMAgGH
-					HPABhx0AAYceAAGHH0ABlxwwAZcdEAGXHosB
-					lx8EAacc8AGnHQABpx4AAacfQAG3HPABtx0A
-					AbceAAG3H0ABtwwCAdcc8AHXHQAB1x4AAdcf
-					QAHnHPAB5x0AAeceAAHnH0ACFxwfAhcdEAIX
-					HisCFx8EAhcMAg==
+					ATccEAE3HQABNx4QATcfQAEnHCABJx0BASce
+					oAEnH5ABlxwwAZcdEAGXHqEBlx8AAdccRQHX
+					HRsB1x5mAdcfQAFHHFABRx0BAUceFwFHH5AB
+					RwwCAhccbwIXHRACFx4hAhcfAAIXDAI=
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>18</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Realtek ALC257 for Lenovo XiaoXin Pro 2019(81XB/81XD) by DalianSky</string>
+					<key>CodecID</key>
+					<integer>283902551</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccMAEnHQEBJx6mAScfkAIXHCACFx0QAhce
+					IQIXHwQBlxxAAZcdEAGXHoEBlx8EAUccEAFH
+					HQEBRx4XAUcfkAFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Realtek ALC257 for Lenovo XiaoXin Pro 2019(81XB/81XD) by DalianSky</string>
+					<key>CodecID</key>
+					<integer>283902551</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccMAEnHQEBJx6mAScfkAIXHCACFx0QAhce
+					IQIXHwQBlxxAAZcdEAGXHoEBlx8EAUccEAFH
+					HQEBRx4XAUcfkAFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>100</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
@@ -4654,6 +4703,36 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>66</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Realtek ALC283 for DELL R14 3437 by Zoran</string>
+					<key>CodecID</key>
+					<integer>283902595</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQEBRx4XAUcfkAFHDAIBdxzwAXcd
+					AAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGX
+					HEABlx0gAZceiwGXHwIBpxzwAacdAAGnHgAB
+					px9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0A
+					AdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAScc
+					MAEnHQEBJx6mAScfkAIXHCACFx0QAhceIQIX
+					HwICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>88</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==

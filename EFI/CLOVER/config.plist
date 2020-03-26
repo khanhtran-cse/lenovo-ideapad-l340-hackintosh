@@ -226,7 +226,7 @@
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 alcid=11 alcdelay=1000</string>
+		<string>kext-dev-mode=1 alcdelay=1000 darkwake=0</string>
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>NeverHibernate</key>
@@ -417,7 +417,7 @@
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
 				<key>layout-id</key>
-				<integer>18</integer>
+				<integer>11</integer>
 				<key>no-controller-patch</key>
 				<integer>1</integer>
 			</dict>

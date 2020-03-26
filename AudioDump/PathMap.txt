@@ -1,0 +1,7 @@
+Output device
+0x14 -> 0x02 - Decimal 20 -> 2 
+0x21 -> 0x03 - Decimal 33 -> 3
+Input device
+0x12 -> 0x24 -> 0x07 - Decimal 18 ->  36 -> 7
+0x19 -> 0x22 -> 0x09 - Decimal 26 -> 34 -> 9
+0x19 -> 0x23 -> 0x08 (highler priority) - Decimal 25 -> 35 -> 8
