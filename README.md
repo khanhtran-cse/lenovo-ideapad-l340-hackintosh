@@ -1,24 +1,26 @@
 # Lenovo Ideapad L340 Gaming Hackintosh
 
-![Cover](/docs/cover.jpg)
-Current version is Catalina 10.15.3 (also tested in Mojave 10.14.6)
+![Cover](/docs/cover.png)
+Current version is Catalina 10.15.4
 
-## System description
+## System Specification
 
-IdeaPad L340-15IRH Gaming
-```
-1. CPU i5 9300H
-2. Ram 16GB
-3. Wifi has been replaced with Dell 1560
-4. SSD Samsung 970 EVO Plus 250GB + HDD WDC 1TB
-5. Intel UHD Graphics 630 + GTX 1050
-6. 2 USB 3.0 + 1 USB Type C
-7. Trackpad Synaptics SYNA2B52
-8. Audio ALC257
-9. BIOS version - update later
-```
+| Name | IdeaPad L340-15IRH Gaming | |
+| --- | --- | --- |
+| CPU | Intel Core i5 9300H | |
+| Graphics | Intel UHD Graphics 630 + GTX 1050 | |
+| RAM | 16GB DDR4 | Default 8GB DDR4 |
+| Wifi| BCM94352Z - DW1560 | Default Intel Wifi |
+| NVME SSD| Samsung SSD 970 EVO Plus 250GB | No SSD default|
+| SATA Disk | WDC WD10SPZX-24Z10 1TB | |
+| USB | 2 USB 3.0 + 1 USB 3.1 Type C | |
+| Trackpad | Synaptics SYNA2B52 |
+| Audio | Realtek ALC 257 |
+| BIOS version| BGCN28WW |
+| OSX version| 10.15.4 |
 
-## What will work?
+## Working
+
 
 ```
 1. Wifi (Dell 1560)
