@@ -1,23 +1,25 @@
 # Lenovo Ideapad L340 Gaming Hackintosh
 
 ![Cover](/docs/cover.png)
-Current version is Catalina 10.15.4
 
 ## System Specification
 
-| Name | IdeaPad L340-15IRH Gaming | |
+IdeaPad L340-15IRH Gaming specification:
+
+| Type | Name | Note |
 | --- | --- | --- |
 | CPU | Intel Core i5 9300H | |
 | Graphics | Intel UHD Graphics 630 + GTX 1050 | |
-| RAM | 16GB DDR4 | Default 8GB DDR4 |
-| Wifi| BCM94352Z - DW1560 | Default Intel Wifi |
+| Display | 15.6in FullHD | |
+| RAM | 16GB DDR4 | Upgraded from 8GB DDR4 |
+| Wifi| BCM94352Z - DW1560 | Default Intel Wifi does't work. |
 | NVME SSD| Samsung SSD 970 EVO Plus 250GB | No SSD default|
 | SATA Disk | WDC WD10SPZX-24Z10 1TB | |
 | USB | 2 USB 3.0 + 1 USB 3.1 Type C | |
 | Trackpad | Synaptics SYNA2B52 |
 | Audio | Realtek ALC 257 |
 | BIOS version| BGCN28WW |
-| OSX version| 10.15.4 |
+| OSX version| Catalina 10.15.4 |
 
 ## Working
 
