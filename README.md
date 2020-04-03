@@ -42,7 +42,7 @@ After a lot of searching, I found the solution - run trackpad in Polling mode. B
 
 Thanks to [@EmotionalLove](https://github.com/EmotionalLove) who implemented Polling mode for VoodooI2CSynaptics.kext and [@tctien342](https://github.com/tctien342) who found and refer this for me.
 
-__Updated:__ I haved implemented  __Quiet After Typing__ feature for Synaptics Trackpad to avoid unexpect tap while typing. You can use my version if you prefered. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics/releases)
+__Updated:__ I have implemented  __Quiet After Typing__ feature for Synaptics Trackpad to avoid unexpect tap while typing. You can use my version if you prefered. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics/releases)
 
 __Note 1:__ If your trackpad is not SYNA2B52, you have to rename device name in Info.plist file of VoodooI2CSynaptic.kext to your trackpad code.
 
@@ -80,14 +80,14 @@ __Note:__ Almost USB type C to HDMI adapter will not work. The type C port of th
 
 - This laptop has a buggy DSDT, so trackpad cannot use Interupt mode. I tried to use Polling mode. Thanks to [@EmotionalLove](https://github.com/EmotionalLove/) who implements Polling mode for VoodooI2CSynaptics.kext. [Link here](https://github.com/EmotionalLove/VoodooI2CSynaptics)
 
-Thanks to [@tctien342](https://github.com/tctien342) who found it.
+- Thanks to [@tctien342](https://github.com/tctien342) who found it.
 
 ### Jan 15 2020 - Updated at Mar 8 2020
 - Use below command to fix headphone noise after sleep. After run command, replug headphone.
 
     ```hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25```
 
-__Note__: Restart while plugged USB + sleep is persistent on Windows 10. It is seem DSDT bug.
+- __Note__: Restart while plugged USB + sleep is persistent on Windows 10. It is seem DSDT bug.
 
 ### Dec 20 2019
 
@@ -110,7 +110,7 @@ __Note__: Restart while plugged USB + sleep is persistent on Windows 10. It is s
 - Use kext ```VoodooTSCSync``` to fix laggy after waking up.
 Link: [Rehabman version](https://github.com/RehabMan/VoodooTSCSync)
 
-Update: Use CpuTscSync.kext  instead.
+- __Update:__ Use CpuTscSync.kext  instead of VoodooTSCSync.
 ### Oct 15 2019
 
 - Disable dGPU for fix black screen + shutdown when sleeping.
