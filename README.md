@@ -44,7 +44,9 @@ Thanks to [@EmotionalLove](https://github.com/EmotionalLove) who implemented Pol
 
 __Updated:__ I have implemented  __Quiet After Typing__ feature for Synaptics Trackpad to avoid unexpect tap while typing. You can use my version if you prefered. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics/releases)
 
-__Note 1:__ If your trackpad is not SYNA2B52, you have to rename device name in Info.plist file of VoodooI2CSynaptic.kext to your trackpad code.
+__Note 1:__ If your trackpad is not SYNA2B52, you have to change __device name__ in Info.plist file of VoodooI2CSynaptic.kext to ```your trackpad code```.
+
+![Trackpad code](/docs/trackpad-device.png)
 
 __Note 2:__ If your trackpad don't work, please make sure this is run in Polling mode. For more detail, visit [here](https://voodooi2c.github.io/#Polling%20Mode/Polling%20Mode)
 
