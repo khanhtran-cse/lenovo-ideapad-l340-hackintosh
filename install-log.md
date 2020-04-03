@@ -2,6 +2,9 @@
 
 ## Fix bug log
 
+### Mar 2020
+Change from VoodooTSSync.kext to CpuTscSync.kext and set boot flag darkwake=0 to fix crash while long sleep.
+
 ### Mar 19 2020
 
 I known how to implement Quiet After Typing. The trackpad works as expect.

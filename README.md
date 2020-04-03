@@ -15,93 +15,110 @@ IdeaPad L340-15IRH Gaming specification:
 | Wifi| BCM94352Z - DW1560 | Default Intel Wifi does't work. |
 | NVME SSD| Samsung SSD 970 EVO Plus 250GB | No SSD default|
 | SATA Disk | WDC WD10SPZX-24Z10 1TB | |
-| USB | 2 USB 3.0 + 1 USB 3.1 Type C | |
+| USB | 2 USB 3.1 + 1 USB 3.1 Type C | |
 | Trackpad | Synaptics SYNA2B52 |
 | Audio | Realtek ALC 257 |
 | BIOS version| BGCN28WW |
 | OSX version| Catalina 10.15.4 |
 
-## Working
+## Not working?
 
+- GTX 1050 (Disabled)
+- HDMI Port (it was connected with GTX 1050)
 
-```
-1. Wifi (Dell 1560)
-2. All USB Port
-3. Internal camera
-4. Audio (Speacker + Internal Mic + Headphone + Headphone mic). Shortcuts also worked.
-5. Synaptics trackpad (1f, 2f, 3f,... worked as expect)
-6. Sleep, wake up
-7. Battery status
-8. Intel UHD Graphics 630
-9. Brightness. Shortcuts also worked (F11, F12).
-```
+## Install notes
 
-## What will not work?
+- If your laptop has 8GB RAM, you must change __SMBIOS>Memory>Modules>Size__ in __config.plist__ file to 8196.
 
-```
-1. HDMI Port (it was connected with GTX 1050)
-2. Bluetooth. The bluetooth worked on Mojave 10.14.6 but when upgrade to Catalina 10.15.3, bluetooth kexts make slow boot and wifi problem. So I remove these kexts. I will fix it on future (I dont use bluetooth so I fix it when I am free).
-```
-
-## Known bugs
-
-```
-1. When pluging USB devices (mouse, keyboard,...) and long sleep, the hack will crash. This problem also persistent on Windows 10. I think it is a DSDT bug and I try to fix it.
-```
->2. While typing on keyboard, your hands may touch on trackpad, so cursor will move to other line. It is not really a bug, but I want to disable Trackpad about 500ms while typing to prevent cursor move. Linux driver for this trackpad and VoodooI2CHID has implemented it, but VoodooI2CSynaptics don't.
-
-I update VoodooI2CSynaptics.kext code to implement QUIET AFTER TYPING. You can use this version to prevent unexpected touch while typing. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics)
-
-## Install instruction
-
-__Note:__ If your laptop has 8GB RAM, you must change __SMBIOS>Memory>Modules>Size__ in __config.plist__ file to 8196
-
-- Firstly, you should try my EFI config. If it worked, congratulation! Otherwise, keep reading.
-
-- If your hackintosh crash at booting, remove my DSDT.AML and try again.
-
-- If your hackintosh  continuously crast at booting, you should try and error :))))
-
-__Note:__ You can check install log to know how to fix some common problems. You can find it [here](/install-log.md)
+- If your hackintosh crash at booting, remove my __DSDT.aml__ and try again.
 
 ## For trackpad
 
 ![alt text](/docs/trackpad.png)
 
-Some reasons prevented trackpad work. I think it is a DSDT bug. After a lot of searching, I found the solution - run trackpad in Polling mode. Because the offical VoodooI2CSynaptics.kext dont support polling mode, so you have to use the [EmotionalLove's Synaptics version](https://github.com/EmotionalLove/VoodooI2CSynaptics). Thanks to [@EmotionalLove](https://github.com/EmotionalLove) who implemented Polling mode for VoodooI2CSynaptics.kext and [@tctien342](https://github.com/tctien342) who found and refer this for me.
+Some reasons prevented trackpad work. I think it is a DSDT bug. 
 
-To make trackpad work, you must: 
+After a lot of searching, I found the solution - run trackpad in Polling mode. Because the offical VoodooI2CSynaptics.kext dont support polling mode, so I use the [EmotionalLove's Synaptics version](https://github.com/EmotionalLove/VoodooI2CSynaptics). 
 
-```
-1. Download VoodooI2C kext at https://github.com/alexandred/VoodooI2C/releases.
-I currently use version 2.2.
-2. Download VoodooI2CSynaptics kext at https://github.com/EmotionalLove/VoodooI2CSynaptics/releases.
-3. Rename device name in Info.plist file of VoodooI2CSynaptic to SYNA2B52 (default name is SYNA2B33).
-4. Copy VoodooI2C.kext you downloaded at Step 1 and updated VoodooI2CSynaptics.kext (step 3) to /L/E (or /Clover/kexts/Other).
-5. Rebuilt kext cache if needed.
-6. Have fun!
+Thanks to [@EmotionalLove](https://github.com/EmotionalLove) who implemented Polling mode for VoodooI2CSynaptics.kext and [@tctien342](https://github.com/tctien342) who found and refer this for me.
 
-```
+__Updated:__ I haved implemented  __Quiet After Typing__ feature for Synaptics Trackpad to avoid unexpect tap while typing. You can use my version if you prefered. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics/releases)
 
-__Note:__ If your trackpad dont work, please make sure this is run in Polling mode. For more detail, visit [here](https://voodooi2c.github.io/#Polling%20Mode/Polling%20Mode)
+__Note 1:__ If your trackpad is not SYNA2B52, you have to rename device name in Info.plist file of VoodooI2CSynaptic.kext to your trackpad code.
 
-~~Some reasons prevented trackpad work, so I have tried changed some code snippet of VoodooI2C.kext. So you must use __```_my custom VoodooI2C.kext_```__ + VoodooI2CHID.kext or VoodooI2CSynaptics.kext depends on your trackpad is ELAN or Synaptics. VoodooI2CHID.kext/VoodooI2CSynaptics.kext you can find at [Release page](https://github.com/alexandred/VoodooI2C/releases) of VoodooI2C. (Current version 2.2)~~
+__Note 2:__ If your trackpad don't work, please make sure this is run in Polling mode. For more detail, visit [here](https://voodooi2c.github.io/#Polling%20Mode/Polling%20Mode)
 
-1. ~~To make trackpad work, you should patch GPIO patch in VoodooI2C Guide. You can find Instruction [here](https://voodooi2c.github.io/#Installation/Installation)~~
-
-2.~~After patch this, you can copy and patse my VoodooI2C kext (VoodooI2C.kext and VoodooI2CSynaptic.kext) to clover (or /L/E). If your trackpad is ELAN, you must replace VoodooI2CSynaptics.kext with VoodooI2CHID.kext.~~
-
-3. ~~Rebuilt cache if needed~~
-
-
-~~__Note that my laptop uses Synaptic trackpad, but some other L340 laptop use ELAN trackpad. If you trackpad is ELAN, you can download VoodooI2C kext from [Release page](https://github.com/alexandred/VoodooI2C/releases), and copy two files VoodooI2C.kext + VoodooI2CHID.kext to clover (or /L/E). And then copy the my VoodooI2c.kext file and override the origin file of Release.__~~
 
 ## For HDMI
 
 You cannot use HDMI because HDMI is connected with GTX 1050 that was disabled in DSDT. To resolve this problem, I bought a USB 3.0 to HDMI adapter (about 30$). The quality of Audio and Video is acceptable (Full HD - 60fps) .
 
-Here is a adapter that support Mac OS/Windows/Linux. [Cable USB 3.0 to HDMI Unitek Y3702](https://www.amazon.com/-/es/Y-3702/dp/B00DHBWFHU) (I bought it with 30$). After got it, you must download kext/driver for it from [DisplayLink page](https://www.displaylink.com/downloads/macos).
+Here is some adapters that support Mac OS/Windows/Linux:
+- [Cable USB 3.0 to HDMI Unitek Y3702](https://www.amazon.com/-/es/Y-3702/dp/B00DHBWFHU). I bought it with 30$. 
+- [Usb 3.0 Naar Hdmi Converter Usb 2.0 Usb 3.0 Naar Hdmi Vga Dvi Converter Voor Windows 10/Mac Os. Displaylink Usb 3.0 Video Converter](https://nl.aliexpress.com/item/33022768893.html?spm=a2g0s.9042311.0.0.3d364c4dqZEQ11). Thanks to William Hoedjes who suggested and confirmed this worked.
 
-## Contact me
+After got it, you must download kext/driver for it from [DisplayLink page](https://www.displaylink.com/downloads/macos).
 
-If you need support from me, you can send email to trqukhanh0104@gmail.com.
+__Note:__ Almost USB type C to HDMI adapter will not work. The type C port of this laptop doesn't support DP - DISPLAYPORT. So you must use USB Type A to HDMI Adapter.
+
+## Fix bug log
+
+### Mar 2020
+
+- Change from VoodooTSSync.kext to CpuTscSync.kext and set boot flag darkwake=0 to fix crash while long sleep.
+- Update Bluetooth kext to get it work on Catalina.
+
+### Mar 19 2020
+
+- I known how to implement Quiet After Typing. The trackpad works as expect.
+
+### Mar 8 2020
+
+- The Bluetooth kexts cause slow boot and Wifi issues on Catalina. Remove it and update others before update to Catalina 10.15
+
+### Mar 7 2020
+
+- This laptop has a buggy DSDT, so trackpad cannot use Interupt mode. I tried to use Polling mode. Thanks to [@EmotionalLove](https://github.com/EmotionalLove/) who implements Polling mode for VoodooI2CSynaptics.kext. [Link here](https://github.com/EmotionalLove/VoodooI2CSynaptics)
+
+Thanks to [@tctien342](https://github.com/tctien342) who found it.
+
+### Jan 15 2020 - Updated at Mar 8 2020
+- Use below command to fix headphone noise after sleep. After run command, replug headphone.
+
+    ```hda-verb 0x19 SET_PIN_WIDGET_CONTROL 0x25```
+
+__Note__: Restart while plugged USB + sleep is persistent on Windows 10. It is seem DSDT bug.
+
+### Dec 20 2019
+
+- Patch _Q11 (Brightness down) + _Q12(Brightness up) to change brightness from keyboard
+
+### Nov 18 2019
+
+- Use NoTouchID to fix slow/buggy when show enter password dialog (authentication).
+
+- Link: [NoTouchId](https://github.com/al3xtjames/NoTouchID)
+
+### Oct 17 2019
+
+- Custom ```Usb inject all``` to fix immediately wake up after sleeping.
+- Change Webcam and Bluetooth to type Internal (255).
+- Patch USB3 _PRW 0x6D Skylake if need
+
+### Oct 16 2019
+
+- Use kext ```VoodooTSCSync``` to fix laggy after waking up.
+Link: [Rehabman version](https://github.com/RehabMan/VoodooTSCSync)
+
+Update: Use CpuTscSync.kext  instead.
+### Oct 15 2019
+
+- Disable dGPU for fix black screen + shutdown when sleeping.
+Use Rehadman guide.
+
+## Credits
+- [tctien342](https://github.com/tctien342) who supports me fix bugs.
+- [acidanthera](https://github.com/acidanthera) for providing almost all kexts and drivers
+- [alexandred](https://github.com/alexandred) for providing VoodooI2C
+- [RehabMan](https://github.com/rehabman) for providing numbers of hotpatches and hotpatch guides
+- [EmotionalLove](https://github.com/EmotionalLove/) who implemented Polling mode for VoodooI2CSynaptics.kext
