@@ -30,23 +30,21 @@ IdeaPad L340-15IRH Gaming specification:
 
 - If your laptop has 8GB RAM, you must change __SMBIOS>Memory>Modules>Size__ in __config.plist__ file to 8196.
 
-- If your hackintosh crash at booting, remove my __DSDT.aml__ and try again.
+- If your hackintosh crash at booting, remove my __DSDT.aml__ + __SSDT-9-CB-01.aml__ and try again.
 
 ## For trackpad
 
 ![alt text](/docs/trackpad.png)
 
-Some reasons prevented trackpad work. I think it is a DSDT bug. 
+Some reasons prevented trackpad work on __interrupt mode__. I think it is a DSDT bug. So you must run trackpad on __Polling mode__. The latest VoodooI2CSynaptic.kext does support __Polling mode__.
 
-After a lot of searching, I found the solution - run trackpad in Polling mode. Because the offical VoodooI2CSynaptics.kext dont support polling mode, so I use the [EmotionalLove's Synaptics version](https://github.com/EmotionalLove/VoodooI2CSynaptics). 
-
-Thanks to [@EmotionalLove](https://github.com/EmotionalLove) who implemented Polling mode for VoodooI2CSynaptics.kext and [@tctien342](https://github.com/tctien342) who found and refer this for me.
-
-__Updated:__ I have implemented  __Quiet After Typing__ feature for Synaptics Trackpad to avoid unexpect tap while typing. You can use my version if you prefered. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics/releases)
-
-__Note 1:__ If your trackpad is not SYNA2B52, you have to change __device name__ in Info.plist file of VoodooI2CSynaptic.kext to ```your trackpad code```.
+Make sure that you changed __device name__ in Info.plist file of VoodooI2CSynaptic.kext to ```your trackpad code```. Example, my trackpad is Synaptic SYNA2B52:
 
 ![Trackpad code](/docs/trackpad-device.png)
+
+__Note 1:__ I have implemented  __Quiet After Typing__ feature for Synaptic Trackpad to avoid unexpected tap while typing. You can use my version if you preferred. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics/releases)
+
+
 
 __Note 2:__ If your trackpad don't work, please make sure this is run in Polling mode. For more detail, visit [here](https://voodooi2c.github.io/#Polling%20Mode/Polling%20Mode)
 
@@ -80,7 +78,7 @@ __Note:__ Almost USB type C to HDMI adapter will not work. The type C port of th
 
 ### Mar 7 2020
 
-- This laptop has a buggy DSDT, so trackpad cannot use Interupt mode. I tried to use Polling mode. Thanks to [@EmotionalLove](https://github.com/EmotionalLove/) who implements Polling mode for VoodooI2CSynaptics.kext. [Link here](https://github.com/EmotionalLove/VoodooI2CSynaptics)
+- This laptop has a buggy DSDT, so trackpad cannot use Interrupt mode. I tried to use Polling mode. Thanks to [@EmotionalLove](https://github.com/EmotionalLove/) who implements Polling mode for VoodooI2CSynaptics.kext. [Link here](https://github.com/EmotionalLove/VoodooI2CSynaptics)
 
 - Thanks to [@tctien342](https://github.com/tctien342) who found it.
 
