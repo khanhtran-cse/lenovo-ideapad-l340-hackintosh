@@ -9,7 +9,7 @@ IdeaPad L340-15IRH Gaming specification:
 | Type | Name | Note |
 | --- | --- | --- |
 | CPU | Intel Core i5 9300H | |
-| Graphics | Intel UHD Graphics 630 + GTX 1050 | |
+| Graphics | Intel UHD Graphics 630 | Disabled GTX 1050 |
 | Display | 15.6in FullHD | |
 | RAM | 16GB DDR4 | Upgraded from 8GB DDR4 |
 | Wifi| BCM94352Z - DW1560 | Default Intel Wifi does't work. |
@@ -18,8 +18,8 @@ IdeaPad L340-15IRH Gaming specification:
 | USB | 2 USB 3.1 + 1 USB 3.1 Type C | |
 | Trackpad | Synaptics SYNA2B52 |
 | Audio | Realtek ALC 257 |
-| BIOS version| BGCN28WW |
-| OSX version| Catalina 10.15.4 |
+| BIOS version| BGCN28WW - BGCN29WW |
+| OSX version| Catalina 10.15.5 |
 
 ## Not working?
 
@@ -42,13 +42,30 @@ Make sure that you changed __device name__ in Info.plist file of VoodooI2CSynapt
 
 ![Trackpad code](/docs/trackpad-device.png)
 
-__Note 1:__ I have implemented  __Quiet After Typing__ feature for Synaptic Trackpad to avoid unexpected tap while typing. You can use my version if you preferred. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics/releases)
+__Note 1:__ If your trackpad don't work, please make sure this is run in Polling mode. For more detail, visit [here](https://voodooi2c.github.io/#Polling%20Mode/Polling%20Mode)
 
+__Update 1:__ I have implemented  __Quiet After Typing__ feature for Synaptic Trackpad to avoid unexpected tap while typing. You can use my version if you preferred. [Link here](https://github.com/khanhtran-cse/VoodooI2CSynaptics/releases)
 
+__Update 2:__ I added code to __my VoodooI2cSynaptic.kext__ to disable/enable trackpad via PrtSc key. If you want to disable/enable trackpad, you can press PrtSc key. Rarely, trackpad doesn't work after wake up, disable and re-enable make it work again (using PrtSc key).
 
-__Note 2:__ If your trackpad don't work, please make sure this is run in Polling mode. For more detail, visit [here](https://voodooi2c.github.io/#Polling%20Mode/Polling%20Mode)
+## Enable HiDPI
 
+On the default resolution (1920x1080), text is too small to read (my experience). No way to change text size except change resolution. But if you change resolution without enable HiDPI, text is blurry.
 
+To enable HiDPI, you can use [one-key-hidpi](https://github.com/xzhih/one-key-hidpi). I tested different resolutions and only 1424x802 work properly after wake up.
+
+![hidpi](./docs/hidpi.png)
+
+## For Audio
+
+Headphone will be noise after wake up. To fix it, use [my ALCPlugfix](https://github.com/khanhtran-cse/ALCPlugFix).
+
+The audio have some minor issues, there are:
+- Input method doesn't switch from Internal Microphone to Line In when you pluged in Headphone. You must switch it manual.
+
+- Sometimes after wake up, no sound on Speaker or Headphone. You must open __System Preferences->Sound->Input__ to make it work again.
+
+![Fix no sound after wake up](./docs/sound-input.png)
 ## For HDMI
 
 You cannot use HDMI because HDMI is connected with GTX 1050 that was disabled in DSDT. To resolve this problem, I bought a USB 3.0 to HDMI adapter (about 30$). The quality of Audio and Video is acceptable (Full HD - 60fps) .
@@ -60,6 +77,15 @@ Here is some adapters that support Mac OS/Windows/Linux:
 After got it, you must download kext/driver for it from [DisplayLink page](https://www.displaylink.com/downloads/macos).
 
 __Note:__ Almost USB type C to HDMI adapter will not work. The type C port of this laptop doesn't support DP - DISPLAYPORT. So you must use USB Type A to HDMI Adapter.
+
+## Credits
+- [tctien342](https://github.com/tctien342) who supports me fix bugs.
+- [acidanthera](https://github.com/acidanthera) for providing almost all kexts and drivers
+- [alexandred](https://github.com/alexandred) for providing VoodooI2C
+- [RehabMan](https://github.com/rehabman) for providing numbers of hotpatches and hotpatch guides
+- [EmotionalLove](https://github.com/EmotionalLove/) who implemented Polling mode for VoodooI2CSynaptics.kext
+- [xzhih](https://github.com/xzhih/one-key-hidpi) who help enable HiDPI easier.
+- Apple for macos
 
 ## Fix bug log
 
@@ -115,10 +141,3 @@ Link: [Rehabman version](https://github.com/RehabMan/VoodooTSCSync)
 
 - Disable dGPU for fix black screen + shutdown when sleeping.
 Use Rehadman guide.
-
-## Credits
-- [tctien342](https://github.com/tctien342) who supports me fix bugs.
-- [acidanthera](https://github.com/acidanthera) for providing almost all kexts and drivers
-- [alexandred](https://github.com/alexandred) for providing VoodooI2C
-- [RehabMan](https://github.com/rehabman) for providing numbers of hotpatches and hotpatch guides
-- [EmotionalLove](https://github.com/EmotionalLove/) who implemented Polling mode for VoodooI2CSynaptics.kext
