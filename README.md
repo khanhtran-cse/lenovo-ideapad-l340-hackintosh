@@ -26,11 +26,24 @@ IdeaPad L340-15IRH Gaming specification:
 - GTX 1050 (Disabled)
 - HDMI Port (it was connected with GTX 1050)
 
-## Install notes
+## To do
+1. Separate Trackpad patch from DSDT.aml for OpenCore.
+
+## Installation notes - CLOVER
+
+- Copy kexts in ```Kexts``` folders to ```CLOVER/kexts/Other```.
 
 - If your laptop has 8GB RAM, you must change __SMBIOS>Memory>Modules>Size__ in __config.plist__ file to 8196.
 
 - If your hackintosh crash at booting, remove my __DSDT.aml__ + __SSDT-9-CB-01.aml__ and try again.
+
+## Installation notes - CLOVER
+
+- Copy kexts in ```Kexts``` folders to ```OC/Kexts```.
+
+- If your hackintosh crash at booting, remove my __DSDT.aml__ and try again.
+
+- Every changes, you must reload config: Open __ProperTree__ -> Press __Cmd + Shift + R__ -> Choose OC folder.
 
 ## For trackpad
 
