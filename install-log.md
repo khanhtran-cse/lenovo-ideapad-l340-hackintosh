@@ -2,6 +2,11 @@
 
 ## Fix bug log
 
+### August 2020
+Sometimes screen is black after sleep. Try remove com.apple.PowerManager* in /Librarys/Preferences
+
+
+
 ### Mar 2020
 Change from VoodooTSSync.kext to CpuTscSync.kext and set boot flag darkwake=0 to fix crash while long sleep.
 
