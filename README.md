@@ -43,7 +43,7 @@ IdeaPad L340-15IRH Gaming specification:
 
 - If your hackintosh crash at booting, remove my __DSDT.aml__ and try again.
 
-- Every changes, you must reload config: Open __ProperTree__ -> Press __Cmd + Shift + R__ -> Choose OC folder.
+- Every changes, you must reload config: Open ```OC/config.plsit``` in __ProperTree__ -> Press __Cmd + Shift + R__ -> Choose OC folder.
 
 ## For trackpad
 
