@@ -1,3 +1,5 @@
+**Updated: I purchused a Macbook Pro 16 and didn't use L340 anymore. This repository will not be maintain.**
+
 # Lenovo Ideapad L340 Gaming Hackintosh
 
 ![Cover](/docs/cover.png)
